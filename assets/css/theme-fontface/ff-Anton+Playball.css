@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Playball');
+
+.Heading--ff-Anton::before {
+    font-family: 'Anton', sans-serif;
+}
+
+.ff-Playball {
+    font-family: 'Playball', cursive;
+}

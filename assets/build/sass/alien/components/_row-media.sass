@@ -1,0 +1,32 @@
+// Media
+
+div[class*='col-'].media-left,
+div[class*='col-'].media-body
+    float: none
+    display: table-cell
+    // height: 100%
+
+div[class*='col-'].media-left
+    padding-right: 15px
+    +ipad
+        float: left
+        max-width: 100%
+    +mobile
+        padding: 0
+
+div[class*='col-'].media-body
+    +ipad
+        float: left
+        width: 100%
+
+.row.media
+    display: table
+    table-layout: fixed
+    height: 100%
+    width: 100%
+    overflow: visible
+    margin: 0
+    +ipad
+        display: block
+    .media-body
+        overflow: visible

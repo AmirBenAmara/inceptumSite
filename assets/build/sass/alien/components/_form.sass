@@ -1,0 +1,64 @@
+// Form
+
+.form-group
+    margin-bottom: 30px
+
+.form-control
+    height: $form-height
+    border-color: rgba($black, .1)
+    box-shadow: none
+    // border-radius: 0
+    &:focus
+        border-color: $primary
+        box-shadow: none
+
+    &--light
+        background-color: rgba($black, .03 )
+
+    &--shadow
+        border-color: transparent
+        box-shadow: 0 0 30px rgba($black, .1)
+        transition: none $speed*2 $easing
+        transition-property: box-shadow
+        &:focus
+            border-color: transparent
+            box-shadow: 0 0 30px rgba($black, .2)
+
+    &--white
+        background-color: $white
+
+    &.u-Rounded
+        padding-left: 25px
+        padding-right: 25px
+
+textarea.form-control
+    min-height: 115px
+    max-width: 100%
+    resize: none
+    padding-top: 10px
+    padding-bottom: 10px
+
+select.form-control
+    appearance: none
+
+.select-wrapper
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        font-family: FontAwesome
+        content: "\f105"
+        right: 0
+        margin-right: 20px
+        top: 50%
+        transform: translateY(-50%)
+
+
+.bg-darker,
+.bg-dark
+    .form-control
+        border-color: rgba($white, .1)
+        background-color: rgba($white, .05)
+        color: $gray-light
+        &:focus
+            border-color: $primary

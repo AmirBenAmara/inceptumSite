@@ -1,0 +1,142 @@
+// 05 Slider
+
+.swiper-container
+    height: 520px
+
+.swiper-slide
+    background-position: center
+    background-size: cover
+    cursor: grab
+    .animated
+        animation-delay: .5s
+
+
+.swiper-pagination
+    &-custom
+        left: auto
+
+.swiper-button
+    &-next
+        background-color: rgba($black, .5)
+        width: 50px
+        height: 60px
+        right: 0
+        margin-top: -30px
+        border-radius: 4px 0 0 4px
+        background-image: none
+        transition: none $speed*3 $easing
+        transition-property: width, background-color
+        &::before
+            content: ''
+            position: absolute
+            height: 100%
+            width: 20px
+            right: 14px
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNS41LDE5LjVjLTAuMSwwLTAuMywwLTAuNC0wLjFjLTAuMi0wLjItMC4yLTAuNSwwLTAuN2w4LjYtOC42TDUuMSwxLjRDNSwxLjIsNSwwLjgsNS4xLDAuNnMwLjUtMC4yLDAuNywwbDksOWMwLjIsMC4yLDAuMiwwLjUsMCwwLjdsLTksOUM1LjgsMTkuNSw1LjYsMTkuNSw1LjUsMTkuNUw1LjUsMTkuNXoiLz48L3N2Zz4=)
+        .swiperCount
+            left: 18px
+    &-prev
+        background-color: rgba($black, .5)
+        width: 50px
+        height: 60px
+        left: 0
+        margin-top: -30px
+        border-radius: 0 4px 4px 0
+        background-image: none
+        transition: none $speed*3 $easing
+        transition-property: width, background-color
+        &::before
+            content: ''
+            position: absolute
+            height: 100%
+            width: 20px
+            left: 14px
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTQuNSwxOS41YzAuMSwwLDAuMywwLDAuNC0wLjFjMC4yLTAuMiwwLjItMC41LDAtMC43TDYuMiwxMGw4LjYtOC42YzAuMi0wLjIsMC4yLTAuNSwwLTAuN3MtMC41LTAuMi0wLjcsMGwtOSw5QzUsOS44LDUsMTAuMiw1LjEsMTAuNGw5LDlDMTQuMiwxOS41LDE0LjQsMTkuNSwxNC41LDE5LjVMMTQuNSwxOS41eiIvPjwvc3ZnPg==)
+        .swiperCount
+            right: 18px
+
+
+.swiperCount
+    background-color: transparent
+    width: 30px
+    height: 30px
+    position: absolute
+    font-size: 11px
+    top: 50%
+    transform: translate(0, -50%)
+    color: $white
+    opacity: 0
+    transition: none $speed $easing
+    transition-property: opacity
+    transition-delay: 0s
+    &-current
+        position: absolute
+        top: 0
+        left: 3px
+        line-height: 1
+    &-devider
+        position: absolute
+        width: 100%
+        height: 100%
+        background-position: center
+        background-repeat: no-repeat
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMC43LDE5LjNMMC43LDE5LjNjLTAuMS0wLjEtMC4xLTAuMywwLTAuNUwxOC45LDAuN2MwLjEtMC4xLDAuMy0wLjEsMC41LDB2MGMwLjEsMC4xLDAuMSwwLjMsMCwwLjVMMS4xLDE5LjNDMSwxOS41LDAuOCwxOS41LDAuNywxOS4zeiIvPjwvc3ZnPg==)
+        transform: scale(0)
+        transition: none $speed $easing
+        transition-property: transform
+        transition-delay: 0s
+    &-total
+        position: absolute
+        bottom: 0
+        right: 3px
+        line-height: 1
+
+
+// hover
+// swiper button effect
+// with smooth animation
+
+.swiper-button
+    &-next, &-prev
+        &:hover
+            background-color: rgba($black, .8)
+            width: 100px
+            .swiperCount
+                opacity: 1
+                transition: none $speed $easing
+                transition-property: opacity
+                transition-delay: $speed*2
+                &-devider
+                    transform: scale(.8)
+                    transition: none $speed $easing
+                    transition-property: transform
+                    transition-delay: $speed*3
+
+// scheme
+// button scheme change
+// depands on theme color
+
+.swiper-button
+    &-next
+        &[data-scheme="light"]
+            background-color: rgba($white, .5)
+            &::before
+                background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTUuNSwxOS41Yy0wLjEsMC0wLjMsMC0wLjQtMC4xYy0wLjItMC4yLTAuMi0wLjUsMC0wLjdsOC42LTguNkw1LjEsMS40QzUsMS4yLDUsMC44LDUuMSwwLjZzMC41LTAuMiwwLjcsMGw5LDljMC4yLDAuMiwwLjIsMC41LDAsMC43bC05LDlDNS44LDE5LjUsNS42LDE5LjUsNS41LDE5LjVMNS41LDE5LjV6Ii8+PC9zdmc+)
+            .swiperCount
+                color: $black
+                &-devider
+                    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTAuNywxOS4zTDAuNywxOS4zYy0wLjEtMC4xLTAuMS0wLjMsMC0wLjVMMTguOSwwLjdjMC4xLTAuMSwwLjMtMC4xLDAuNSwwdjBjMC4xLDAuMSwwLjEsMC4zLDAsMC41TDEuMSwxOS4zQzEsMTkuNSwwLjgsMTkuNSwwLjcsMTkuM3oiLz48L3N2Zz4=)
+
+    &-prev
+        &[data-scheme="light"]
+            background-color: rgba($white, .5)
+            &::before
+                background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE0LjUsMTkuNWMwLjEsMCwwLjMsMCwwLjQtMC4xYzAuMi0wLjIsMC4yLTAuNSwwLTAuN0w2LjIsMTBsOC42LTguNmMwLjItMC4yLDAuMi0wLjUsMC0wLjdzLTAuNS0wLjItMC43LDBsLTksOUM1LDkuOCw1LDEwLjIsNS4xLDEwLjRsOSw5QzE0LjIsMTkuNSwxNC40LDE5LjUsMTQuNSwxOS41TDE0LjUsMTkuNXoiLz48L3N2Zz4=)
+            .swiperCount
+                color: $black
+                &-devider
+                    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTAuNywxOS4zTDAuNywxOS4zYy0wLjEtMC4xLTAuMS0wLjMsMC0wLjVMMTguOSwwLjdjMC4xLTAuMSwwLjMtMC4xLDAuNSwwdjBjMC4xLDAuMSwwLjEsMC4zLDAsMC41TDEuMSwxOS4zQzEsMTkuNSwwLjgsMTkuNSwwLjcsMTkuM3oiLz48L3N2Zz4=)

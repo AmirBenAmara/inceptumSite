@@ -1,0 +1,374 @@
+// 04 Portfolio
+
+/*portfolio toggle*/
+#portfolio-toggle,
+#portfolio-toggle-2,
+#portfolio-toggle-3
+    display: none
+    padding: 10px 0px
+    color: $white
+    text-decoration: none
+    i
+        padding-right: 10px
+
+
+/*portfolio nav*/
+
+.portfolio-nav
+    background: $primary
+    color: $white
+    position: relative
+    &:before
+        content: " "
+        position: absolute
+        height: 59px
+        width: 50%
+        left: 50%
+        //background: $gray-darker
+    ul
+        padding: 0
+        margin: 0
+        li
+            display: inline-block
+            a
+                padding: 20px 12px
+                display: inline-block
+                color: $white
+                text-decoration: none
+                &:hover
+                    background: rgba(255,255,255,.2)
+        .active
+            background: rgba(255,255,255,.2)
+
+
+    +ipad
+        background: none
+        color: $white
+        position: relative
+        &:before
+            content: " "
+            position: absolute
+            height: 40px
+            width: 100%
+            left: 0%
+            background: $primary
+
+        #portfolio-toggle, #portfolio-toggle-2,  #portfolio-toggle-3
+            display: block
+
+        .p-option, .p-option-2, .p-option-3
+            display: none
+            background: $gray-darker
+
+            li
+                width: 100%
+                a
+                    width: 100%
+                    color: $white
+                    padding: 10px
+
+
+/*portfolio filter*/
+
+.portfolio-filter
+    list-style: none
+    margin: 50px 0
+    padding: 0
+    li
+        display: inline-block
+        margin: 5px
+        @media (max-width: 667px)
+            margin: 10px 2px
+        a
+            display: inline-block
+            color: $gray-darker
+            text-transform: uppercase
+            padding: 10px 20px
+            text-decoration: none
+            font-size: 12px
+            @media (max-width: 667px)
+                padding: 5px 10px
+            &:hover
+                background: $gray-darker
+                color: $white
+                border-radius: 3px
+    li.active
+        a
+            background: $gray-darker
+            padding: 10px 20px
+            color: $white
+            border-radius: 3px
+            @media (max-width: 667px)
+                padding: 5px 10px
+
+.bg-darker
+    .portfolio-filter
+        li
+            a
+                color: $white
+                &:hover
+                    background: $gray-dark
+                    color: $white
+        li.active
+            a
+                background: $gray-dark
+                color: $white
+
+
+/*portfolio-grid*/
+
+.portfolio-grid
+    .portfolio-item
+        float: left
+
+        a
+            &:focus
+                outline: none
+
+        .portfolio-image
+            display: block
+            position: relative
+            img
+                display: block
+                width: 100%
+                height: auto
+
+            .portfolio-hover-title
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                margin: 0
+                transition: all .3s
+                opacity: 0
+                background-color: rgba(0, 0, 0, .9)
+                //cursor: pointer
+                //text-align: center
+                padding: 30px
+                justify-content: center
+                align-items: center
+
+                .portfolio-content
+                    position: absolute
+                    top: 60%
+                    left: 0px
+                    transform: translateY(-55%)
+                    width: 100%
+                    text-align: center
+                    transition: all .3s
+                    h3, h4
+                        color: $white
+                        margin-bottom: 10px
+                        margin-top: 0
+                    i
+                        color: $white
+                        font-size: 30px
+
+                    .portfolio-category
+                        span
+                            color: $primary
+                            margin: 0 5px
+
+        &:hover
+            .portfolio-hover-title
+                opacity: 1
+
+                .portfolio-content
+                    top: 50%
+
+    .portfolio-title
+        margin-bottom: 5%
+        h3, h4
+            margin-bottom: 5px
+            //margin-top: 0
+        .portfolio-category
+            span
+                color: $gray-light
+                a
+                    color: $gray-light
+
+.portfolio-grid.grid-1
+    width: 100%
+
+.portfolio-grid.grid-2
+    .portfolio-item
+        width: 50%
+        @media (max-width: 768px)
+            width: 50%
+        @media (max-width: 568px)
+            width: 100%
+
+
+
+.portfolio-grid.grid-3
+    .portfolio-item
+        width: 33.33%
+        @media (max-width: 768px)
+            width: 50%
+        @media (max-width: 568px)
+            width: 100%
+
+
+
+.portfolio-grid.grid-4
+    .portfolio-item
+        width: 25%
+        @media (max-width: 768px)
+            width: 50%
+        @media (max-width: 568px)
+            width: 100%
+
+
+
+.portfolio-grid.grid-5
+    .portfolio-item
+        width: 20%
+        @media (max-width: 768px)
+            width: 50%
+        @media (max-width: 568px)
+            width: 100%
+
+
+// gutter
+
+.portfolio-grid.grid-2.gutter
+    margin-right: -2%
+    .portfolio-item
+        width: 48%
+        margin-right: 2%
+        margin-bottom: 2%
+
+        @media (max-width: 768px)
+            width: 48%
+        @media (max-width: 568px)
+            width: 98%
+
+
+.portfolio-grid.grid-3.gutter
+    margin-right: -2%
+    .portfolio-item
+        width: 31.33%
+        margin-right: 2%
+        margin-bottom: 2%
+
+        @media (max-width: 768px)
+            width: 48%
+        @media (max-width: 568px)
+            width: 98%
+
+
+.portfolio-grid.grid-4.gutter
+    margin-right: -2%
+    .portfolio-item
+        width: 23%
+        margin-right: 2%
+        margin-bottom: 2%
+
+        @media (max-width: 768px)
+            width: 48%
+        @media (max-width: 568px)
+            width: 98%
+
+
+.portfolio-grid.grid-5.gutter
+    margin-right: -2%
+    .portfolio-item
+        width: 18%
+        margin-right: 2%
+        margin-bottom: 2%
+
+        @media (max-width: 768px)
+            width: 48%
+        @media (max-width: 568px)
+            width: 98%
+
+
+.portfolio-masonry
+    .portfolio-title
+        padding-left: 3%
+
+
+.portfolio-masonry.gutter
+    .portfolio-title
+        padding-left: 0
+
+
+// grid with bootstrap col
+
+.row.portfolio-grid
+    > div[class*='col-']
+        position: relative
+        margin-bottom: 30px
+
+
+/*---------------------------------------
+ isotop style
+ --------------------------------------- */
+
+
+.isotope-item
+    z-index: 2
+
+
+.isotope-hidden.isotope-item
+    pointer-events: none
+    z-index: 1
+
+
+/*Isotope CSS3 transitions */
+
+.isotope,
+.isotope .isotope-item
+    transition-duration: 0.8s
+
+
+.isotope
+    transition-property: height, width
+
+
+.isotope .isotope-item
+    transition-property: transform, opacity
+
+
+/*disabling Isotope CSS3 transitions */
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition
+    transition-duration: 0s
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling
+    transition: none
+
+
+// Portfolio grid variation - 2
+.Portfolio-grid--v2
+    margin-right: -2%
+
+.Portfolio-item--sqr,
+.Portfolio-item--vlg,
+.Portfolio-item--hlg
+    margin-bottom: 2%
+    margin-right: 2%
+
+.Portfolio-item--hlg
+    width: 98%
+
+.Portfolio-item--sqr,
+.Portfolio-item--vlg
+    width: 48%
+
++ipad
+    .Portfolio-grid--v2,
+    .Portfolio-item--sqr,
+    .Portfolio-item--vlg,
+    .Portfolio-item--hlg
+        margin-right: 0
+
+    .Portfolio-item--sqr,
+    .Portfolio-item--vlg,
+    .Portfolio-item--hlg
+        width: 100%

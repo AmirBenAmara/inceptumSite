@@ -1,0 +1,546 @@
+// Buttons
+
+.btn
+    position: relative
+    height: $btn-height
+    line-height: $btn-height - 2
+    font-size: $size-base
+    padding: 0 30px
+    &.text-uppercase
+        font-size: $size-base - 2
+        font-weight: 700
+
+    &-lg
+        height: $btn-height-lg - 1
+        line-height: $btn-height-lg - 4
+        font-size: $size-large
+        padding: 0 40px
+        &.text-uppercase
+            font-size: $size-large - 1
+    &-sm
+        height: $btn-height-sm
+        line-height: $btn-height-sm - 2
+        font-size: $size-small
+        padding: 0 20px
+        &.text-uppercase
+            font-size: $size-small - 2
+            > .Icon
+                margin-top: -2px
+
+    &:hover,
+    &:focus,
+    &.focus
+        outline: 0
+
+    &:active,
+    &.active
+        outline: 0
+        box-shadow: none
+
+    &:active:hover,
+    &:active:focus
+        outline: 0
+
+
+    // link
+    &-link
+        color: $primary
+    &-go
+        color: $paragraph-text
+        padding: 0
+        .fa
+            position: relative
+            transition: none $speed*2 $easing
+            transition-property: margin
+        &:hover,
+        &:focus,
+        &:active
+            outline: 0
+            text-decoration: none
+            color: $text
+            .fa
+                margin-left: 3px
+
+        &--info
+            color: $info
+            &:hover,
+            &:focus,
+            &:active
+                color: darken($info, 5%)
+
+
+    // default
+    &-default
+        color: $gray-darker
+        border-color: $gray
+        background-color: $white
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, background-color
+        &:hover,
+        &:focus,
+        &.focus
+            color: $white
+            background-color: $primary
+            border-color: $primary
+
+        &:active,
+        &.active
+            color: $white
+            background-color: darken($primary, 3%)
+            border-color: darken($primary, 3%)
+
+        &:active:hover,
+        &:active:focus
+            color: $white
+            background-color: darken($primary, 5%)
+            border-color: darken($primary, 5%)
+
+    // dark
+    &-dark
+        color: $white
+        border-color: $gray
+        background-color: $gray
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, background-color
+        &:hover,
+        &:focus,
+        &.focus
+            color: $white
+            background-color: $gray-dark
+            border-color: $gray-dark
+
+        &:active,
+        &.active
+            color: $white
+            background-color: darken($gray-dark, 3%)
+            border-color: darken($gray-dark, 3%)
+
+        &:active:hover,
+        &:active:focus
+            color: $white
+            background-color: darken($gray-dark, 5%)
+            border-color: darken($gray-dark, 5%)
+
+        &--alpha20
+            border: 0
+            background-color: rgba($black, .2)
+            &:hover,
+            &:focus,
+            &.focus
+                background-color: rgba($black, .4)
+
+            &:active,
+            &.active
+                background-color: rgba($black, .5)
+
+            &:active:hover,
+            &:active:focus
+                background-color: rgba($black, .4)
+
+    &-darker
+        color: $white
+        border-color: $gray-darker
+        background-color: $gray-darker
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, background-color
+        &:hover,
+        &:focus,
+        &.focus
+            color: $white
+            background-color: $black
+            border-color: $black
+
+        &:active,
+        &.active
+            color: $white
+            background-color: $gray-darker
+            border-color: $gray-darker
+
+        &:active:hover,
+        &:active:focus
+            color: $white
+            background-color: $gray-darker
+            border-color: $gray-darker
+
+    // gradient
+    &-gradient
+        border: none
+        +btn-gradient-animation-toggle($white, 90deg, $primary, $secondary, $speed*2)
+
+    // primary
+    &-primary
+        color: $white
+        border-color: $primary
+        background-color: $primary
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, background-color
+        &:hover,
+        &:focus,
+        &.focus
+            color: $white
+            background-color: darken($primary, 3%)
+            border-color: darken($primary, 3%)
+        &:active,
+        &.active
+            color: $white
+            background-color: $primary
+            border-color: $primary
+        &:active:hover,
+        &:active:focus
+            color: $white
+            background-color: darken($primary, 5%)
+            border-color: darken($primary, 5%)
+
+        &--gradient
+            // border: none
+            // +gradient-animation(90deg, $primary, $secondary, $speed*2)
+            // background: linear-gradient(90deg, $primary, $secondary)
+            // background-color: $primary
+            // +gradient-animation(90deg, $primary, $secondary, $speed*2)
+
+    // shadow
+    &-shadow
+        color: $gray-darker
+        border-color: $white
+        background-color: $white
+        box-shadow: 0 0 50px rgba($black, .1)
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, box-shadow, background-color
+        &:hover,
+        &:focus,
+        &.focus
+            outline: 0
+            color: $primary
+            box-shadow: 0 0 15px rgba($black, .12)
+
+
+    // white
+    &-white
+        color: $gray-darker
+        border-color: $white
+        background-color: $white
+        transition: none $speed*2 $easing
+        transition-property: color, border-color, background-color
+        &--transparent
+            color: $white
+            border: 1px solid rgba($white, .66)
+            background-color: transparent
+        &:hover,
+        &:focus,
+        &.focus
+            color: $primary
+            border-color: $white
+            background-color: $white
+
+        &:active,
+        &.active
+            color: $primary
+            border-color: $white
+            background-color: $white
+
+        &:active:hover,
+        &:active:focus
+            color: $primary
+            border-color: darken($white, 5%)
+            background-color: darken($white, 5%)
+
+    // black
+    &-black
+        background-color: $black
+        border-color: $black
+        color: $white
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active:hover,
+        &:active:focus,
+        &:active,
+        &.active
+            color: $white
+            border-color: $black
+            background-color: $black
+
+    // alien
+    // just add border bottom
+    &--alien
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            width: 100%
+            height: 5px
+            background-color: rgba($black, .07)
+            left: 0
+            bottom: 0
+            z-index: 11
+
+    // hover dark
+    // make on hover dark
+    &--hoverDark
+        &:hover,
+        &:focus,
+        &.focus
+            color: $white
+            background: $gray
+            background-color: $gray
+            border-color: $gray
+        &:active,
+        &.active
+            color: $white
+            background-color: $gray
+            border-color: $gray
+        &:active:hover,
+        &:active:focus
+            color: $white
+            background-color: darken($gray, 5%)
+            border-color: darken($gray, 5%)
+
+        &.btn-gradient
+            +btn-gradient-animation-hoverDark($white, 90deg, $primary, $secondary, $speed*2)
+
+    &__iconCenter
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    // fixed width x height
+    &-play
+        position: relative
+        width: 52px
+        height: 52px
+        padding: 0
+        border: 0
+        box-shadow: 0 0 10px rgba($black, .1)
+        background-color: $white
+        color: $primary
+        transition: none $speed*2 $easing
+        transition-property: color, box-shadow, background-color
+        .fa-play
+            margin-left: 2px
+        &:hover
+            color: $primary
+            box-shadow: 0 0 15px rgba($black, .2)
+
+        // gradient
+        &--primary
+            background-color: $primary
+            color: $white
+            &:hover
+                color: $white
+        &--gradient
+            +btn-gradient-animation-toggle($white, 90deg, $primary, $secondary, $speed*2)
+
+        &--hoverGradient
+            +btn-gradient-hover-animation($white, 90deg, $primary, $secondary, $speed*2)
+
+        &--hoverPrimary
+            &:hover
+                color: $white
+                background-color: $primary
+
+        // sizes
+        &--lg
+            width: 70px
+            height: 70px
+
+
+    // creative
+    &-creative
+        padding: 0 20px
+        background-color: transparent
+        color: $gray-light
+        transition: none $speed*2 $easing
+        transition-property: color
+        &::before
+            content: ""
+            position: absolute
+            width: 15px
+            height: 1px
+            margin-top: -1px
+            background-color: $gray-light
+            top: 50%
+            transform: translate(0, -50%)
+            transition: none $speed*2 $easing
+            transition-property: margin-left, margin-right, background-color
+        .arrow
+            display: inline-block
+            width: 0
+            height: 0
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            transition: none $speed*2 $easing
+            transition-property: margin-left, background-color
+            &-left
+                width: 15px
+                height: 1px
+                background-color: $gray-light
+                margin-left: -20px
+                margin-top: -1px
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    transform: translateY(-3px)
+                    border-right: 5px solid $gray-light
+                    border-top: 4px solid transparent
+                    border-bottom: 4px solid transparent
+                    left: 0
+                    margin-left: -4px
+                    transition: none $speed*2 $easing
+                    transition-property: border-right-color
+            &-right
+                width: 15px
+                height: 1px
+                background-color: $gray-light
+                margin-left: 5px
+                margin-top: -1px
+                &::before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    transform: translateY(-3px)
+                    border-left: 5px solid $gray-light
+                    border-top: 4px solid transparent
+                    border-bottom: 4px solid transparent
+                    right: 0
+                    margin-top: 0
+                    margin-right: -4px
+                    transition: none $speed*2 $easing
+                    transition-property: border-left-color
+
+        &--prev
+            padding-left: 24px
+            &::before
+                right: 0
+                margin-right: 0
+            &:hover,
+            &:focus
+                &::before
+                    margin-right: -5px
+                    background-color: $gray-darker
+                .arrow
+                    margin-left: -25px
+                    background-color: $gray-darker
+                    &::before
+                        border-right-color: $gray-darker
+        &--next
+            padding-right: 24px
+            &::before
+                left: 0
+                margin-left: 0
+            &:hover,
+            &:focus
+                &::before
+                    margin-left: -5px
+                    background-color: $gray-darker
+                .arrow
+                    margin-left: 10px
+                    background-color: $gray-darker
+                    &::before
+                        border-left-color: $gray-darker
+
+        &--white
+            color: $white
+            &::before
+                background-color: $white
+            .arrow
+                &-left
+                    background-color: $white
+                    &::before
+                        border-right-color: $white
+                &-right
+                    background-color: $white
+                    &::before
+                        border-left-color: $white
+
+            &:hover,
+            &:focus
+                &.btn-creative
+                    &--prev
+                        &:hover,
+                        &:focus
+                            color: $white
+                            &::before
+                                background-color: $white
+                            .arrow
+                                background-color: $white
+                                &::before
+                                    border-right-color: $white
+                    &--next
+                        &:hover,
+                        &:focus
+                            color: $white
+                            &::before
+                                background-color: $white
+                            .arrow
+                                background-color: $white
+                                &::before
+                                    border-left-color: $white
+
+
+    // vertical
+    &--vertical
+        transform: translateX(50%) rotate(270deg)
+        transform-origin: 0% 0
+
+    .Icon
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        margin-top: -3px
+
+.bg-dark,
+.bg-darker
+    .btn-creative
+        &--prev
+            &:hover,
+            &:focus
+                color: $white
+                &::before
+                    background-color: $white
+                .arrow
+                    background-color: $white
+                    &::before
+                        border-right-color: $white
+        &--next
+            &:hover,
+            &:focus
+                color: $white
+                &::before
+                    background-color: $white
+                .arrow
+                    background-color: $white
+                    &::before
+                        border-left-color: $white
+
+
+.BackToTop
+    width: 40px
+    height: 40px
+    line-height: 40px
+    background-color: rgba($black, .9)
+    position: fixed
+    bottom: 0
+    right: 0
+    margin-right: 20px
+    margin-bottom: 20px
+    text-align: center
+    z-index: 9999
+    border-radius: 50%
+
+    &:hover
+        background-color: rgba($primary, 1)
+    i
+        font-size: 21px
+        color: $white
+
+    &--show
+        transform: translateY(0px)
+        opacity: 1
+
+    &--hide
+        transform: translateY(100px)
+        opacity: 0

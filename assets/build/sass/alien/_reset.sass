@@ -1,0 +1,89 @@
+// 01 Reset
+
+html
+    background-color: $body-background
+    font-size: $size-base
+    -moz-osx-font-smoothing: grayscale
+    -webkit-font-smoothing: antialiased
+    min-width: 300px
+    overflow-x: hidden
+    overflow-y: auto
+    text-rendering: optimizeLegibility
+
+body
+    overflow-x: hidden
+    color: $text
+    font-size: 1rem
+    font-weight: $weight-normal
+    line-height: $line-height
+    font-family: $family-sans-serif
+    letter-spacing: $letter-spacing
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin-top: 30px
+    margin-bottom: 25px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    line-height: $heading-line-height
+    letter-spacing: $heading-letter-spacing
+
+h1,
+h2,
+h3
+    font-weight: $weight-light
+
+h4,
+h5
+    font-weight: $weight-normal
+
+h6
+    font-weight: $weight-bold
+
++mobile
+    h1,
+    .h1
+        font-size: 30px
+    h2,
+    .h2
+        font-size: 24px
+
+    h3,
+    .h3
+        font-size: 18px 
+
+
+
+
+p
+    line-height: $paragraph-line-height
+    color: $paragraph-text
+
+br
+    clear: both
+
+hr
+    border-color: #e5e5e5
+
+.panel
+    border-radius: 0
+
+.map-area
+    width: 100%
+    height: 400px
+
++ipad
+
+    .img-fit-responsive
+        width: 100%
+        height: auto

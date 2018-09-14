@@ -1,0 +1,311 @@
+// Owl Carousel v2.2.0
+
+.owl-theme
+    .owl-item
+        cursor: grab
+
+    .owl-nav
+        margin-top: 20px
+        -webkit-tap-highlight-color: transparent
+        font-size: 24px
+        color: rgba(black, .33)
+        display: none
+        [class*='owl-']
+            padding: 4px 7px
+            display: inline-block
+            cursor: pointer
+            border-radius: 3px
+            &:first-child
+                margin-right: 10px
+            &:hover
+                color: rgba(black, .66)
+                text-decoration: none
+
+        .owl-prev
+            &::before
+                content: "\f104"
+                font-family: FontAwesome
+        .owl-next
+            &::before
+                content: "\f105"
+                font-family: FontAwesome
+
+        .disabled
+            opacity: 0.5
+            cursor: default
+
+        &.disabled + .owl-dots
+            margin-top: 10px
+
+    .owl-dots
+        display: none
+        table-layout: fixed
+        margin-top: 20px
+        -webkit-tap-highlight-color: transparent
+        .owl-dot
+            display: table-cell
+            vertical-align: middle
+            zoom: 1
+            span
+                width: 8px
+                height: 8px
+                margin: 5px 5px
+                background-color: rgba(black, .33)
+                display: block
+                -webkit-backface-visibility: visible
+                border-radius: 30px
+                transition: none $speed $easing
+                transition-property: background-color, opacity, height, transform
+
+            &:hover
+                span
+                    transform: scale(1.3)
+            &.active
+                span
+                    transform: scale(1.5)
+                    background-color: rgba(black, .66)
+
+    &.OwlNav
+        .owl-nav
+            display: inline-block
+
+        &--faAngle
+            .owl-nav
+                position: relative
+                font-size: 18px
+                &::before
+                    content: "/"
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                .owl-prev
+                    &::before
+                        content: "\f177"
+                        font-family: FontAwesome
+                .owl-next
+                    &::before
+                        content: "\f178"
+                        font-family: FontAwesome
+
+        &--triangle
+            .owl-nav
+                font-size: 18px
+                [class*='owl-']
+                    color: $white
+                    background-image: url(../imgs/triangle.png)
+                    background-repeat: no-repeat
+                    padding: 0
+                    width: 18px
+                    height: 30px
+                    position: relative
+                    &::before
+                        line-height: 28px
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        margin-top: -1px
+                        margin-left: 1px
+                .owl-prev
+                    &::before
+                        content: "\f104"
+                .owl-next
+                    transform: scaleX(-1)
+                    &::before
+                        content: "\f104"
+
+            &.OwlNav--edge
+                .owl-nav
+                    .owl-next
+                        transform: translate(0%, -50%) scaleX(-1)
+
+            &.OwlNav--faAngle
+                .owl-nav
+                    &::before
+                        display: none
+
+            &--white
+                .owl-nav
+                    [class*='owl-']
+                        color: $black
+                        background-image: url(../imgs/triangle-white.png)
+
+            &--lg
+                .owl-nav
+                    [class*='owl-']
+                        height: 42px
+                        width: 24px
+                        color: $white
+                        background-image: url(../imgs/triangle-lg.png)
+                        &::before
+                            margin-top: -1px
+                            margin-left: 2px
+                &.OwlNav--triangle--white
+                    .owl-nav
+                        [class*='owl-']
+                            color: $black
+                            background-image: url(../imgs/triangle-white-lg.png)
+
+
+        &--top
+            .owl-nav
+                position: absolute
+                bottom: 100%
+                right: 0
+                margin-bottom: 20px
+
+        &--edge
+            .owl-nav
+                position: static
+                display: block
+                margin-top: 0
+                [class*='owl-']
+                    position: absolute
+                    top: 50%
+                    transform: translate(0%, -50%)
+                    &.owl-prev
+                        left: 0
+                        margin-left: -30px
+                        +mobile
+                            margin-left: -20px
+                    &.owl-next
+                        right: 0
+                        margin-right: -30px
+                        +mobile
+                            margin-right: -20px
+
+            &.OwlNav--faAngle
+                .owl-nav
+                    &::before
+                        display: none
+
+            &.OwlNav--inside
+                .owl-nav
+                    [class*='owl-']
+                        &.owl-prev
+                            margin-left: 10px
+                            +mobile
+                                margin-left: 5px
+                        &.owl-next
+                            margin-right: 10px
+                            +mobile
+                                margin-right: 5px
+
+    &.OwlDots
+        .owl-dots
+            display: table
+        &--marginTop2x
+            .owl-dots
+                margin-top: 40px
+                +ipad
+                    margin-top: 30px
+                +mobile
+                    margin-top: 20px
+
+        &--lines
+            .owl-dots
+                height: 40px
+                .owl-dot
+                    span
+                        width: 7px
+                        height: 15px
+                    &:hover
+                        span
+                            transform: scale(1)
+                            height: 20px
+                    &.active
+                        span
+                            transform: scale(1)
+                            height: 25px
+        &--inside
+            .owl-dots
+                position: absolute
+                bottom: 0
+                left: 0
+                margin-left: 20px
+                margin-top: 0
+                margin-bottom: 20px
+                .owl-dot
+                    vertical-align: bottom
+            &--top
+                .owl-dots
+                    bottom: auto
+                    top: 0
+                    margin-bottom: 0
+                    margin-top: 20px
+                    .owl-dot
+                        vertical-align: bottom
+
+                &.OwlDots--lines
+                    .owl-dots
+                        margin-top: 0
+                        .owl-dot
+                            vertical-align: top
+                            span
+                                border-bottom-left-radius: 30px !important
+                                border-bottom-right-radius: 30px !important
+                                border-top-left-radius: 0
+                                border-top-right-radius: 0
+                                margin-bottom: 5px
+                                margin-top: 0
+
+
+
+
+            &.OwlDots--lines
+                .owl-dots
+                    margin-bottom: 0
+                    height: 35px
+                    .owl-dot
+                        span
+                            border-bottom-left-radius: 0
+                            border-bottom-right-radius: 0
+                            height: 12px
+                            margin-bottom: 0
+                        &:hover
+                            span
+                                transform: scale(1)
+                                height: 18px
+                        &.active
+                            span
+                                transform: scale(1)
+                                height: 24px
+
+
+.bg-dark,
+.bg-darker
+    .owl-theme
+        .owl-nav
+            color: rgba(white, .33)
+            [class*='owl-']
+                &:hover
+                    color: rgba($white, .66)
+        .owl-dots
+            .owl-dot
+                span
+                    background-color: rgba(white, .33)
+                &.active span,
+                &:hover span
+                    background-color: rgba(white, .66)
+
+
+.text-center
+    .owl-dots
+        margin-left: auto
+        margin-right: auto
+
+    .OwlDots--inside
+        .owl-dots
+            left: 50%
+            transform: translate(-50%)
+
+.text-right
+    .owl-dots
+        margin-left: auto
+
+    .OwlDots--inside
+        .owl-dots
+            right: 0
+            margin-right: 20px
+            left: auto

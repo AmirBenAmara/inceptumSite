@@ -1,0 +1,163 @@
+// Panel
+
+.panel-group
+    .panel
+        border-radius: 0
+        margin-bottom: 20px
+        &-border
+            margin-bottom: -6px
+
+.panel
+    box-shadow: none
+    border: 0
+    overflow: hidden
+    .panel-heading
+        position: relative
+        padding: 0
+        border-radius: 0
+        // background-color: rgba($black, .04)
+        // border: 1px solid #ddd
+
+    .panel-title
+        > a
+            display: block
+            padding: 20px 35px 20px 20px
+            outline: none
+            text-decoration: none
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 600
+            border: 1px solid #ddd
+            &[aria-expanded]
+                transition: none $speed*3 $easing
+                transition-property: color, background, border-color
+                &::after
+                    font-family: FontAwesome
+                    content: "\f107"
+                    position: absolute
+                    right: 0
+                    margin-right: 15px
+                    top: 50%
+                    font-size: $size-large
+                    font-weight: 400
+                    transform: translate(-50%, -50%)
+
+            &[aria-expanded="true"]
+                background-color: rgba($black, .04)
+                &::after
+                    content: "\f106"
+
+    .panel-body
+        padding: 30px 40px
+        line-height: 2
+        border: 1px solid #ddd
+        border-top: 0 !important
+
+    &-default
+        .panel-title
+            > a
+                &[aria-expanded="true"]
+                    color: $white
+                    background-color: $gray-dark
+                    border-color: $gray-dark
+
+    // primary
+    &-primary
+        .panel-heading
+            color: $text
+            background-color: rgba($black, .04)
+        .panel-title
+            > a
+                &[aria-expanded="true"]
+                    color: $white
+                    background-color: $primary
+                    border-color: $primary
+        &--gradient
+            .panel-heading
+                color: $text
+                background-color: rgba($black, .04)
+            .panel-title
+                > a
+                    &[aria-expanded="true"]
+                        color: $white
+                        background: linear-gradient(310deg, $primary, $secondary)
+                        background-color: $primary
+                        border-color: $primary
+
+    // info
+    &-info
+        .panel-heading
+            color: $text
+            background-color: rgba($black, .04)
+        .panel-title
+            > a
+                &[aria-expanded="true"]
+                    color: $white
+                    background-color: $info
+                    border-color: $info
+
+    // shadow
+    &-shadow
+        box-shadow: 0 0 100px rgba($black, .1)
+        border-radius: 6px !important
+        .panel-heading
+            border: 0
+            background-color: $white
+        .panel-title
+            > a
+                padding: 25px 30px
+                font-size: $size-large
+                text-transform: none
+                font-weight: $weight-normal
+                border: 0
+                &[aria-expanded]
+                    &::after
+                        display: none
+                &[aria-expanded="true"]
+                    color: $info
+                    background-color: $white
+        .panel-body
+            border: 0
+            padding: 0 30px 30px
+
+    // border
+    &-border
+        position: relative
+        overflow: visible
+        .panel-heading
+            position: static
+        .panel-title
+            > a
+                padding: 15px 20px
+                margin-left: 50px
+                border-radius: 6px
+                // border-bottom-color: transparent
+                &[aria-expanded]
+                    &::after
+                        width: 51px
+                        top: 0
+                        left: 0
+                        margin-left: 25px
+                        right: auto
+                        text-align: center
+                        margin-top: 25px
+
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        height: 100%
+                        width: 51px
+                        border: 1px solid #ddd
+                        border-radius: 6px
+                &[aria-expanded="true"]
+                    color: $primary
+                    background-color: transparent
+                    border-bottom-color: transparent
+                    border-radius: 6px 6px 0 0
+        .panel-body
+            margin-left: 50px
+            padding-top: 0
+            border-bottom: 1px solid #ddd
+            border-radius: 0 0 6px 6px

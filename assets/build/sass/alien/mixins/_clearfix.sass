@@ -1,0 +1,14 @@
+
+=clearfix
+    &:before,
+    &:after
+        content: ""
+        display: table
+    &:after
+        clear: both
+
+=placeholder
+    $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input'
+    @each $placeholder in $placeholders
+        &:#{$placeholder}-placeholder
+            @content

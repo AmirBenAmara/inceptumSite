@@ -1,0 +1,38 @@
+// Breadcrumb
+
+.breadcrumb
+    padding: 0px
+    background-color: transparent
+    border-radius: 0
+
+    a
+        color: $gray-darker
+
+    > .active
+        color: $gray-darker
+
+        span
+            border-bottom: 1px solid $gray-darker
+
+    > li+li:before
+        padding: 0 5px
+        color: $gray-darker
+        content: "\f105"
+        font-family: fontawesome
+
+.breadcrumb.text-white
+    a
+        color: $white
+
+    > .active
+        color: $white
+
+        span
+            border-bottom: 1px solid $white
+
+    > li+li:before
+        color: $white
+
++ipad
+    .breadcrumb.pull-right
+        float: left 

@@ -1,0 +1,122 @@
+// Blurb
+
+.Blurb
+    position: relative
+    background-color: $white
+    z-index: 1
+    // color: $text
+
+    &--transparent
+        background-color: transparent
+
+    // childs property transitions
+    &__hoverText
+        transition: none $speed*2 $easing
+        transition-property: color
+    &__hoverBg
+        transition: none $speed*2 $easing
+        transition-property: color, background-color
+        &--gradient
+            +gradient-hover-animation($gray-darker, 310deg, $primary, $secondary, $speed*2)
+
+    // hover to change childs property
+    &:hover
+        .Blurb__hoverText
+            color: $primary
+        .Blurb__hoverBg
+            color: $white
+            background-color: $primary
+            border: 0
+            &:before
+                opacity: 1
+        .Blurb__hoverBtn
+            &.btn-default
+                border-color: $primary
+                color: $primary
+                &:hover,
+                &:focus
+                    color: $white
+                &:active:hover,
+                &:active:focus
+                    color: $white
+
+    &--wrapper
+        padding: 50px 40px
+    &--wrapper20
+        padding: 20px
+    &--wrapper30
+        padding: 30px 20px
+    &--wrapper35
+        padding: 35px 20px
+    &--wrapper40
+        padding: 40px
+    &--wrapper60
+        padding: 60px
+
+    &--hoverBg
+        transition: none $speed*2 $easing
+        transition-property: background-color
+        &--gradient
+            +gradient-hover-animation($white, 310deg, $primary, $secondary, $speed*2)
+
+        &:hover
+            background-color: $primary
+            .Blurb__hoverText
+                color: $white
+            .Blurb__hoverBg
+                color: $text
+                background-color: $white
+                &:before
+                    opacity: 0
+            .Blurb__hoverBtn
+                &.btn-default
+                    color: inherit
+                    &:hover,
+                    &:focus
+                        color: $primary
+                        background-color: $white
+                    &:active:hover,
+                    &:active:focus
+                        color: $primary
+                        background-color: darken($white, 5%)
+
+    // dark
+    &--dark
+        background-color: $gray-dark
+        color: $white
+        p
+            color: $paragraph-text-reverse
+            transition: none $speed*2 $easing
+            transition-property: color
+
+        &.Blurb--hoverBg--gradient
+            &:hover
+                p
+                    color: $white
+
+
+
+// color full blurb
+
+.blurbMultiColor
+    position: relative
+    width: 100%
+    .col-md-4
+        padding: 0
+
+    .blurb
+        &--gray
+            background: $gray-lighter
+        &--primary
+            background: $primary
+        &--black
+            background: $gray-darker
+        &--spacing
+            padding: 15%
+
+
+
+.imgFitScreen
+    img
+        width: 100%
+        height: auto

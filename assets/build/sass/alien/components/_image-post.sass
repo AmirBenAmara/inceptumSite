@@ -1,0 +1,276 @@
+// Image Background
+
+.ImageBackground
+    position: relative
+    height: 100%
+    &--overlay
+        &::before
+            position: absolute
+            content: ''
+            background-color: $black
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            z-index: 2
+        &--white
+            &::before
+                background-color: $white
+
+        &--gradient
+            &::before
+                background: linear-gradient(310deg, $primary, $secondary)
+                background-color: $primary
+
+    &--gray
+        background-color: lighten($gray-darker,82.8%)
+
+    &__holder
+        // will-change: transform, top
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        background-size: cover
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        z-index: 0
+        > img
+            display: none
+
+    > .container
+        position: relative
+        max-width: 100%
+        z-index: 2
+
+@for $i from 0 through 9
+    [data-overlay="#{$i}"]
+        &::before
+            opacity: $i / 10
+
+.js-Parallax
+    overflow: hidden
+    > .ImageBackground__holder
+        background-repeat: repeat
+        // top: -50vh
+        // height: 100vh
+
+// Image block
+.ImageBlock
+    position: relative
+    &__image
+        position: absolute
+        height: 100%
+        top: 0
+        z-index: 2
+        padding: 0
+        right: 0
+        +mobile
+            position: relative
+            min-height: 15em
+            > .ImageBackground
+                position: relative
+                min-height: 15em
+
+        &__title
+            position: absolute
+            bottom: 0
+            left: 0
+            margin-left: -20px
+            transform: rotate(270deg)
+            transform-origin: 0% 26px
+            z-index: 2
+            background-color: $gray-darker
+            color: $white
+            padding: 4px 10px
+            letter-spacing: 1px
+            text-transform: uppercase
+            font-size: 13px
+            font-weight: 600
+            &::after
+                content: ''
+                position: absolute
+                width: 6px
+                height: 100%
+                top: 0
+                right: 0
+                margin-right: -11px
+                background-color: $primary
+
+            &--white
+                background-color: $white
+                color: $text
+
+    > .container
+        position: relative
+        max-width: 100%
+        padding-top: 7em
+        padding-bottom: 7em
+        // overflow: hidden
+        z-index: 2
+        +mobile
+            padding-top: 3em
+            padding-bottom: 3em
+    > .container div[class*='col-']
+        float: left
+
+    &--switch
+        .ImageBlock__image
+            right: auto
+            left: 0
+
+        > .container > .row > div[class*='col-']
+            float: right
+            // margin-right: 30px
+            +mobile
+                max-width: 100%
+                margin-right: 0
+
+        > .container.container--default
+            padding-top: 0
+            padding-bottom: 0
+            > .row
+                > div[class*='col-']
+                    float: left
+                    margin-right: 0
+
+        .ImageBlock__image__title
+            left: auto
+            margin-left: auto
+            right: 0
+            margin-right: -46px
+            transform: translateX(100%) rotate(270deg)
+            transform-origin: 0% 26px
+
+        &.ImageBlock--creative
+            .ImageBlock__rope
+                right: 0
+                margin-right: 15px
+            > .container > .row > div[class*='col-']
+                text-align: right
+
+            > .btn-go
+                position: absolute
+                right: 0
+                margin-right: 15px
+                margin-left: 0
+
+    &--halkaOverlay
+        +mobile
+            margin-left: -15px
+            margin-right: -15px
+        .ImageBlock__image
+            width: 52%
+            +ipad
+                width: 43.66666667%
+            +mobile
+                width: 100%
+
+        > .container
+            padding-left: 0
+            padding-right: 0
+            +mobile
+                padding: 0
+            .col-md-6
+                width: 52%
+                z-index: 5
+                // padding-left: 0
+                +ipad
+                    width: 60.33333333%
+                +mobile
+                    width: 100%
+                .bg-white
+                    background-color: rgba($white, .97)
+                .bg-darker
+                    background-color: rgba($gray-darker, .97)
+                div[class*='bg-']
+                    padding: 60px 100px
+                    +laptop
+                        padding: 60px
+                    +ipad
+                        padding: 50px 40px
+                    +mobile
+                        margin-top: -30px
+                        margin-left: 15px
+                        margin-right: 15px
+                        padding: 30px
+
+    &--creative
+
+        .ImageBlock__rope
+                height: 2px
+                background-color: $gray
+                position: absolute
+                z-index: 2
+                width: 137%
+
+        > .btn-go
+            font-size: 12px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            position: absolute
+            bottom: 0
+            margin-left: 15px
+            z-index: 10
+            color: inherit
+            font-weight: 700
+
+    //
+    &--long
+        > .container
+            padding-top: 23em
+            padding-bottom: 5em
+            +mobile
+                padding-top: 0
+                padding-bottom: 0
+        .ImageBlock__image
+            +mobile
+                min-height: 30em
+                > .ImageBackground
+                    min-height: 30em
+        &__content
+            padding: 20px
+            +mobile
+                padding: 40px 20px
+                margin-top: -20px
+
+        &--center
+            > .container
+                padding-top: 14em
+                padding-bottom: 14em
+                +mobile
+                    padding-top: 0
+                    padding-bottom: 0
+                > .row > div[class*=col-]
+                    +mobile
+                        float: none
+                        text-align: center
+
+        &--top
+            > .container
+                padding-top: 5em
+                padding-bottom: 23em
+                +mobile
+                    padding-top: 0
+                    padding-bottom: 0
+                > .row > div[class*=col-]
+                    +mobile
+                        float: left
+
+
+    &.js-FullHeight
+        .ImageBlock__image
+            +mobile
+                height: auto
+
+// Image
+.Image
+    position: relative
+    &__holder
+        position: relative
+    &__content
+        position: absolute
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)

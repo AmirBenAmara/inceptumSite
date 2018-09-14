@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/imgs/favicon.png" />
+
+    <title>one page index</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:100%7COpen+Sans:300,400,400i,600,700,800">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootsnav/css/bootsnav.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/alien-icon/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/owl.carousel2/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="assets/vendor/switchery/switchery.min.css">
+    <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/vendor/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/alien.min.css">
+    <!-- endinject -->
+
+    <!-- revolution css -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins:600%2C400">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/settings.css">
+
+    <!-- REVOLUTION LAYERS STYLES -->
+    <style type="text/css">#rev_slider_28_1 .uranus.tparrows{width:50px; height:50px; background:rgba(255,255,255,0)}#rev_slider_28_1 .uranus.tparrows:before{width:50px; height:50px; line-height:50px; font-size:40px; transition:all 0.3s;-webkit-transition:all 0.3s}#rev_slider_28_1 .uranus.tparrows:hover:before{opacity:0.75}.hermes.tp-bullets{}.hermes .tp-bullet{overflow:hidden;  border-radius:50%;  width:16px;  height:16px;  background-color:rgba(0,0,0,0);  box-shadow:inset 0 0 0 2px rgb(255,255,255);  -webkit-transition:background 0.3s ease;  transition:background 0.3s ease;  position:absolute}.hermes .tp-bullet:hover{background-color:rgba(0,0,0,0.21)}.hermes .tp-bullet:after{content:' '; position:absolute; bottom:0; height:0; left:0; width:100%; background-color:rgb(255,255,255); box-shadow:0 0 1px rgb(255,255,255); -webkit-transition:height 0.3s ease; transition:height 0.3s ease}.hermes .tp-bullet.selected:after{height:100%}</style>
+</head>
+
+<body>
+    <!--header start-->
+    <header>
+        <!-- Start Navigation -->
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed dark navbar-transparent navbar-scrollspy bootsnav" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+            <div class="container">
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="assets/imgs/logo-light.png" class="logo logo-display" alt="">
+                        <img src="assets/imgs/logo.png" class="logo logo-scrolled" alt="">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                            <li ><a href="index.html">Acceuil</a></li>
+                            <li><a href="Prestation.html">Prestation</a></li>
+                            <li><a href="APropos.html">A propos</a></li>
+                            <li><a href="NotreEquipe.html">Notre Equipe</a></li>
+                            <li><a href="Alumni.html">Alumni</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- End Navigation -->
+        <div class="clearfix"></div>
+    </header>
+    <!--header end-->
+
+    <!--slider start-->
+    <section id="home" class="">
+        
+    </section>
+    <!--slider end-->
+
+
+
+    <!--blog start-->
+    <section id="blog" class="u-PaddingTop100 u-PaddingBottom50 u-xs-PaddingTop0 u-xs-PaddingBottom0">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <small class="text-uppercase u-LetterSpacing1">Read</small>
+                    <h1 class="u-MarginTop5 u-MarginBottom10">Contact</h1>
+                    <div class="Split Split--height2"></div>
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <p class="u-MarginTop35">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+                    <p>
+                        <a href="#" class="btn "></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="map" style="width: 100% ;height: 500px"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: 36.899334, lng: 10.189766};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBa125lhGIT4NqneRZ1hR0Q8CQ6drsxu0U&callback=initMap"></script>
+    </section>
+    <!--blog end-->
+    
+
+    <!--contact start-->
+    <section id="contact" class="bg-dark u-PaddingTop100 u-PaddingBottom100">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                    <h1 class="u-MarginTop10 u-MarginBottom35">Contact</h1>
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+                </div>
+            </div>
+            <div class="row u-MarginTop60">
+                <form>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Email" type="email">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Phone" type="tel">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gradient btn--alien btn-block">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--contact end-->
+
+    <!--footer start-->
+    <footer class="bg-darker u-PaddingTop45 u-PaddingBottom45">
+        <div class="container">
+            <div class="row text-sm u-MarginTop20">
+
+                <div class="col-md-5 col-sm-7">
+                    <p class="u-LineHeight2 u-MarginBottom20"><img class="retina logo-v-center u-PaddingRight20" src="assets/imgs/logo-light.png" alt=""/> Copyright © 2009–2017 Alien Template.</p>
+                </div>
+                <div class="col-md-2 col-sm-5 text-center">
+                    <div class="social-links sl-default light-link u-MarginTop10">
+                        <a href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 text-right text-left--sm">
+                    <ul class="list-inline text-paragraph u-LineHeight2 u-MarginBottom0 u-MarginTop5">
+                        <li><span class="footer-dash-sign light"></span></li>
+                        <li class="u-MarginRight10">Call <span class="u-PaddingLeft15- light-txt"> +123 456 789</span></li>
+
+                        <li><span class="footer-dash-sign light"></span></li>
+                        <li>Email <span class="u-PaddingLeft15- light-txt"> info@alienemial.cm</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!-- inject:js -->
+    <script src="assets/vendor/jquery/jquery-1.12.0.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/bootsnav/js/bootsnav.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/jquery.countTo/jquery.countTo.min.js"></script>
+    <script src="assets/vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="assets/vendor/jquery.appear/jquery.appear.js"></script>
+    <script src="assets/vendor/parallax.js/parallax.min.js"></script>
+    <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.js"></script>
+    <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/vendor/switchery/switchery.min.js"></script>
+    <script src="assets/vendor/swiper/js/swiper.min.js"></script>
+    <script src="assets/js/alien.js"></script>
+    <!-- endinject -->
+
+    <!-- revolution JS -->
+    <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLICEY ADD-ON FILES -->
+    <script src="assets/vendor/revolution-slider/revolution-addons/slicey/js/revolution.addon.slicey.min.js?ver=1.0.0"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <script type="text/javascript">
+        var tpj=jQuery;
+
+        var revapi28;
+        tpj(document).ready(function() {
+            if(tpj("#rev_slider_28_1").revolution == undefined){
+                revslider_showDoubleJqueryError("#rev_slider_28_1");
+            }else{
+                revapi28 = tpj("#rev_slider_28_1").show().revolution({
+                    sliderType:"standard",
+                    jsFileLocation:"revolution/js/",
+                    sliderLayout:"fullscreen",
+                    dottedOverlay:"none",
+                    delay:5500,
+                    navigation: {
+                        keyboardNavigation:"off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation:"off",
+                        mouseScrollReverse:"default",
+                        onHoverStop:"off",
+                        arrows: {
+                            style:"uranus",
+                            enable:true,
+                            hide_onmobile:false,
+                            hide_onleave:false,
+                            tmp:'',
+                            left: {
+                                h_align:"left",
+                                v_align:"center",
+                                h_offset:20,
+                                v_offset:0
+                            },
+                            right: {
+                                h_align:"right",
+                                v_align:"center",
+                                h_offset:20,
+                                v_offset:0
+                            }
+                        }
+                        ,
+                        bullets: {
+                            enable:true,
+                            hide_onmobile:false,
+                            style:"hermes",
+                            hide_onleave:false,
+                            direction:"horizontal",
+                            h_align:"center",
+                            v_align:"bottom",
+                            h_offset:0,
+                            v_offset:20,
+                            space:5,
+                            tmp:''
+                        }
+                    },
+                    responsiveLevels:[1240,1024,778,480],
+                    visibilityLevels:[1240,1024,778,480],
+                    gridwidth:[1240,1024,778,480],
+                    gridheight:[868,768,960,720],
+                    lazyType:"none",
+                    shadow:0,
+                    spinner:"off",
+                    stopLoop:"off",
+                    stopAfterLoops:-1,
+                    stopAtSlide:-1,
+                    shuffle:"off",
+                    autoHeight:"off",
+                    fullScreenAutoWidth:"off",
+                    fullScreenAlignForce:"off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "60px",
+                    hideThumbsOnMobile:"off",
+                    hideSliderAtLimit:0,
+                    hideCaptionAtLimit:0,
+                    hideAllCaptionAtLilmit:0,
+                    debugMode:false,
+                    fallbacks: {
+                        simplifyAll:"off",
+                        nextSlideOnWindowFocus:"off",
+                        disableFocusListener:false,
+                    }
+                });
+            }
+
+            if(revapi28) revapi28.revSliderSlicey();
+        });
+    </script>
+
+    <script type="text/javascript" src="assets/vendor/revolution-slider/assets/warning.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+
+nav.navbar.bootsnav
+    .navbar-header
+        // +ipad
+        //     position: relative
+        //     height: 50px
+        // .navbar-brand
+        //     padding: 0
+        //     height: $logo-height
+        //     margin-left: 0
+        //     position: absolute
+        //     top: 50%
+        //     // position: relative
+        //     // margin-top: 50%
+        //     transform: translateY(-50%)
+        //     +ipad
+        //         left: 50%
+        //         top: 50%
+        //         transform: translate(-50%, -50%)
+        //     .logo
+        //         height: 100%
+        //         width: auto
+        //
+        // .navbar-toggle
+        //     margin-top: 9px
+
+    ul.nav
+        > li
+            &:hover,
+            &.active
+                > a
+                    color: $primary
+
+    ul.nav
+        li
+            &.dropdown
+                > ul.dropdown-menu
+                    border-top-color: $primary
+                    li
+                        &:hover
+                            > a
+                                color: $primary
+    .megamenu-content
+        .title
+            text-transform: uppercase
+
+    .attr-nav
+        z-index: 99
+        // margin: 0
+
+        +mobile
+            margin-right: -20px
+            // margin-top: 2px
+        > ul
+            // height: inherit
+            > li
+                // height: inherit
+                > a
+                    +mobile
+                        padding-left: 10px !important
+                &.buy-btn
+                    > a
+                        padding-top: 0
+                        padding-bottom: 0
+                        margin-top: 30px
+                &.dropdown
+                    ul.dropdown-menu
+                        margin-top: -1px
+    // .navbar-transparent.dark
+    &.navbar-transparent
+        &.dark,
+        &.white
+            border-bottom-color: rgba($white, .2)
+            .attr-nav
+                border-left-color: rgba($white, .2)
+
+        &.white--outline
+            background-color: transparent
+            +ipad
+                background-color: $white
+
+    // add black
+    &.black
+        background-color: $black
+        border-bottom-color: $black
+        ul.nav
+            > li
+                > a
+                    color: $white
+                &:hover,
+                &.active
+                    > a
+                        color: $white
+        .attr-nav
+            > ul
+                > li
+                    > a
+                        color: $white
+
+        .navbar-toggle
+            color: $white
+
+        @media (max-width: 992px)
+            .navbar-collapse
+                background-color: $white
+                ul.nav
+                    > li
+                        > a
+                            color: inherit
+
+    .side
+        z-index: 100
+
+ul.cart-list > li.total > .btn
+    border-color: $primary
+
+ul.cart-list > li.total > .btn,
+.attr-nav > ul > li > a span.badge,
+nav.navbar .share ul > li > a:hover,
+nav.navbar .share ul > li > a:focus
+    background-color: $primary
+
+ul.cart-list > li.total > .btn:hover,
+ul.cart-list > li.total > .btn:focus
+    background-color: $gray-darker !important

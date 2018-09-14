@@ -1,0 +1,863 @@
+// 06 Utilities
+
+.FixedLayout
+    position: relative
+    max-width: 1170px
+    margin-left: auto
+    margin-right: auto
+    background-color: $body-background
+    +clearfix
+
+    nav.navbar.bootsnav.navbar-fixed
+        width: auto
+        left: 0
+        right: 0
+
+// Font Size
+
+.u-FontSize20
+    font-size: 20px
+
+.u-FontSize28
+    font-size: 28px
+
+.u-FontSize30
+    font-size: 30px
+
+.u-FontSize50
+    font-size: 50px
+    small
+        padding-right: 2px
+        font-size: 0.5em
+
+.u-FontSize60
+    font-size: 60px
+
+.u-FontSize75
+    font-size: 75px
+
+.u-FontSize100
+    font-size: 100px
+
++laptop
+    // .u-md
++ipad
+    // .u-sm
++mobile
+    .u-xs
+        &-FontSize12
+            font-size: 12px
+        &-FontSize16
+            font-size: 16px
+        &-FontSize20
+            font-size: 20px
+        &-FontSize30
+            font-size: 30px
+        &-FontSize40
+            font-size: 40px
+        &-FontSize50
+            font-size: 50px
+        &-FontSize60
+            font-size: 60px
+
+
+// weight
+
+.u-Weight100
+    font-weight: $weight-lighter
+.u-Weight300
+    font-weight: $weight-light
+.u-Weight400
+    font-weight: $weight-normal
+.u-Weight600
+    font-weight: $weight-semibold
+.u-Weight700
+    font-weight: $weight-bold
+.u-Weight800
+    font-weight: $weight-extra-bold
+
+// Line Height
+.u-LineHeight0
+    line-height: .4
+.u-LineHeight1
+    line-height: 1
+.u-LineHeight1-5
+    line-height: 1.5
+.u-LineHeight2
+    line-height: 2
+.u-LineHeight3
+    line-height: 2
+
+// Letter Spacing
+.u-LetterSpacing1
+    letter-spacing: 1px
+.u-LetterSpacing2
+    letter-spacing: 2px
+.u-LetterSpacing3
+    letter-spacing: 3px
+.u-LetterSpacing4
+    letter-spacing: 4px
+.u-LetterSpacing6
+    letter-spacing: 6px
+.u-LetterSpacing10
+    letter-spacing: 10px
+.u-LetterSpacing15
+    letter-spacing: 15px
+
+// border
+.u-BorderLess
+    border: 0
+.u-Border
+    border: 1px solid rgba($black, .09)
+.u-Border10
+    border: 10px solid rgba($white, .3)
+.u-BorderTop1
+    border-top: 1px solid rgba($black, .09)
+
+// icon size
+.Icon
+    &--16px
+        font-size: 16px
+    &--18px
+        font-size: 18px
+    &--24px
+        font-size: 24px
+    &--32px
+        font-size: 32px
+    &--44px
+        font-size: 44px
+    &--50px
+        font-size: 50px
+    &--60px
+        font-size: 60px
+    &--80px
+        font-size: 80px
+
+.u-Width75
+    width: 75px
+
+// display
+.u-Hide
+    display: none
+
+.u-FlexCenter
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+.u-InlineBlock
+    display: inline-block
+.u-VerticalMiddle
+    vertical-align: middle
+
+.u-Block
+    display: block
+// +laptop
+//     .u-md
+
++ipad
+    .u-sm
+        &-Block
+            display: block
+
++mobile
+    .u-xs
+        &-Block
+            display: block
+
+
+.u-Center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.u-vCenter
+    top: 50%
+    transform: translateY(-50%)
+
+
+
+// thumb
+
+.Thumb
+    position: relative
+    width: 46px
+    height: 46px
+    display: inline-block
+    vertical-align: middle
+    padding: 0
+    &--rotate
+        transform: rotate(45deg)
+    &__iconCenter
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        &--rotate-
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+    &--image
+        text-align: center
+        background-color: rgba($black, .05)
+    &--rounded
+        border-radius: 999px
+        overflow: hidden
+
+    // sizes
+    &--30px
+        width: 30px
+        height: 30px
+
+    &--40px
+        width: 40px
+        height: 40px
+
+    &--52px
+        width: 52px
+        height: 52px
+    &--62px
+        width: 62px
+        height: 62px
+    &--92px
+        width: 92px
+        height: 92px
+    &--116px
+        width: 116px
+        height: 116px
+    &--142px
+        width: 142px
+        height: 142px
+    &--162px
+        width: 162px
+        height: 162px
+    &--182px
+        width: 182px
+        height: 182px
+    &--190px
+        width: 190px
+        height: 190px
+
+    // colors
+    &--black
+        color: $white
+        background-color: $gray-darker
+    &--primary
+        color: $white
+        background-color: $primary
+    &--primaryOutline
+        color: $primary
+        background-color: transparent
+        border: 1px solid $primary
+
+.u-OverflowVisible
+    overflow: visible
+
+
+//height
+
+.u-height200
+    height: 200px
+
+.u-height250
+    height: 250px
+
+.u-height300
+    height: 330px
+
+
+.u-height330
+    height: 330px
+
+.u-height500
+    height: 500px
+    +mobile
+        height: 400px
+
+.u-height600
+    height: 600px
+    +mobile
+        height: 550px
+
+.u-height700
+    height: 700px
+    +mobile
+        height: 550px
+
+// margin
+.u-MarginAuto
+    margin-left: auto
+    margin-right: auto
+
+.u-Margin0
+    margin: 0
+.u-MarginTop0
+    margin-top: 0
+.u-MarginTop5
+    margin-top: 5px
+.u-MarginTop10
+    margin-top: 10px
+.u-MarginTop15
+    margin-top: 15px
+.u-MarginTop20
+    margin-top: 20px
+.u-MarginTop25
+    margin-top: 25px
+.u-MarginTop30
+    margin-top: 30px
+.u-MarginTop35
+    margin-top: 35px
+.u-MarginTop40
+    margin-top: 40px
+.u-MarginTop45
+    margin-top: 45px
+.u-MarginTop50
+    margin-top: 50px
+.u-MarginTop55
+    margin-top: 55px
+.u-MarginTop60
+    margin-top: 60px
+.u-MarginTop65
+    margin-top: 65px
+.u-MarginTop70
+    margin-top: 70px
+.u-MarginTop75
+    margin-top: 75px
+.u-MarginTop80
+    margin-top: 80px
+.u-MarginTop85
+    margin-top: 85px
+.u-MarginTop90
+    margin-top: 90px
+.u-MarginTop95
+    margin-top: 95px
+.u-MarginTop100
+    margin-top: 100px
+.u-MarginTop150
+    margin-top: 150px
+
+.u-MarginBottom0
+    margin-bottom: 0
+.u-MarginBottom5
+    margin-bottom: 5px
+.u-MarginBottom10
+    margin-bottom: 10px
+.u-MarginBottom15
+    margin-bottom: 15px
+.u-MarginBottom20
+    margin-bottom: 20px
+.u-MarginBottom25
+    margin-bottom: 25px
+.u-MarginBottom30
+    margin-bottom: 30px
+.u-MarginBottom35
+    margin-bottom: 35px
+.u-MarginBottom40
+    margin-bottom: 40px
+.u-MarginBottom45
+    margin-bottom: 45px
+.u-MarginBottom50
+    margin-bottom: 50px
+.u-MarginBottom60
+    margin-bottom: 60px
+.u-MarginBottom65
+    margin-bottom: 65px
+.u-MarginBottom70
+    margin-bottom: 70px
+.u-MarginBottom75
+    margin-bottom: 75px
+.u-MarginBottom80
+    margin-bottom: 80px
+.u-MarginBottom95
+    margin-bottom: 95px
+.u-MarginBottom100
+    margin-bottom: 100px
+.u-MarginBottom150
+    margin-bottom: 150px
+
+.u-MarginLeft5
+    margin-left: 5px
+.u-MarginLeft10
+    margin-left: 10px
+
+.u-MarginRight5
+    margin-right: 5px
+.u-MarginRight10
+    margin-right: 10px
+.u-MarginRight20
+    margin-right: 20px
+.u-MarginRight30
+    margin-right: 30px
+
+.u-right
+    right: 0
+
+.u-left
+    left: 0
+
+
+//negative margin
+
+.n-MarginTop5
+    margin-top: -5px
+.n-MarginTop10
+    margin-top: -10px
+
++laptop
+    .u-md
+        &-MarginTop10
+            margin-top: 10px
+
++ipad
+    .u-sm
+
+        &-MarginTop0
+            margin-top: 0
+        &-MarginTop20
+            margin-top: 20px
+        &-MarginTop30
+            margin-top: 30px
+        &-MarginTop40
+            margin-top: 40px
+        &-MarginTop50
+            margin-top: 50px
+
+        &-MarginBottom0
+            margin-bottom: 0
+        &-MarginBottom20
+            margin-bottom: 20px
+        &-MarginBottom30
+            margin-bottom: 30px
+        &-MarginBottom40
+            margin-bottom: 40px
+        &-MarginBottom50
+            margin-bottom: 50px
+        &-MarginBottom60
+            margin-bottom: 60px
+
++mobile
+
+    .u-xs
+        &-Margin0
+            margin: 0
+
+        &-MarginTop0
+            margin-top: 0
+        &-MarginTop20
+            margin-top: 20px
+        &-MarginTop30
+            margin-top: 30px
+        &-MarginTop40
+            margin-top: 40px
+        &-MarginTop50
+            margin-top: 50px
+        &-MarginTop60
+            margin-top: 60px
+
+        &-MarginBottom0
+            margin-bottom: 0
+        &-MarginBottom10
+            margin-bottom: 10px
+        &-MarginBottom20
+            margin-bottom: 20px
+        &-MarginBottom30
+            margin-bottom: 30px
+        &-MarginBottom40
+            margin-bottom: 40px
+        &-MarginBottom50
+            margin-bottom: 50px
+
+        &-MarginRight0
+            margin-right: 0
+
+// padding
+.u-Padding0
+    padding: 0px
+.u-Padding5
+    padding: 5px
+.u-Padding10
+    padding: 10px
+.u-Padding20
+    padding: 20px
+.u-Padding30
+    padding: 30px
+.u-Padding50
+    padding: 50px
+.u-Padding100
+    padding: 100px
+.u-Padding90
+    padding: 70px 90px
+
+.u-PaddingTop0
+    padding-top: 0px
+.u-PaddingTop5
+    padding-top: 5px
+.u-PaddingTop10
+    padding-top: 10px
+.u-PaddingTop15
+    padding-top: 15px
+.u-PaddingTop20
+    padding-top: 20px
+.u-PaddingTop25
+    padding-top: 25px
+.u-PaddingTop30
+    padding-top: 30px
+.u-PaddingTop40
+    padding-top: 40px
+.u-PaddingTop45
+    padding-top: 45px
+.u-PaddingTop50
+    padding-top: 50px
+.u-PaddingTop55
+    padding-top: 55px
+.u-PaddingTop60
+    padding-top: 60px
+.u-PaddingTop65
+    padding-top: 65px
+.u-PaddingTop70
+    padding-top: 70px
+.u-PaddingTop85
+    padding-top: 85px
+.u-PaddingTop90
+    padding-top: 90px
+.u-PaddingTop100
+    padding-top: 100px
+.u-PaddingTop150
+    padding-top: 150px
+
+.u-PaddingBottom0
+    padding-bottom: 0px
+.u-PaddingBottom5
+    padding-bottom: 5px
+.u-PaddingBottom10
+    padding-bottom: 10px
+.u-PaddingBottom20
+    padding-bottom: 20px
+.u-PaddingBottom30
+    padding-bottom: 30px
+.u-PaddingBottom40
+    padding-bottom: 40px
+.u-PaddingBottom45
+    padding-bottom: 45px
+.u-PaddingBottom55
+    padding-bottom: 55px
+.u-PaddingBottom50
+    padding-bottom: 50px
+.u-PaddingBottom60
+    padding-bottom: 60px
+.u-PaddingBottom65
+    padding-bottom: 65px
+.u-PaddingBottom70
+    padding-bottom: 70px
+.u-PaddingBottom80
+    padding-bottom: 80px
+.u-PaddingBottom90
+    padding-bottom: 90px
+.u-PaddingBottom100
+    padding-bottom: 100px
+.u-PaddingBottom150
+    padding-bottom: 150px
+
+.u-PaddingLeft5
+    padding-left: 5px
+.u-PaddingLeft10
+    padding-left: 10px
+.u-PaddingLeft15
+    padding-left: 15px
+.u-PaddingLeft20
+    padding-left: 20px
+.u-PaddingLeft30
+    padding-left: 30px
+.u-PaddingLeft40
+    padding-left: 40px
+.u-PaddingLeft45
+    padding-left: 45px
+.u-PaddingLeft50
+    padding-left: 50px
+.u-PaddingLeft70
+    padding-left: 70px
+.u-PaddingLeft80
+    padding-left: 80px
+.u-PaddingLeft100
+    padding-left: 100px
+
+.u-PaddingRight5
+    padding-right: 5px
+.u-PaddingRight10
+    padding-right: 10px
+.u-PaddingRight15
+    padding-right: 15px
+.u-PaddingRight20
+    padding-right: 20px
+.u-PaddingRight30
+    padding-right: 30px
+.u-PaddingRight25
+    padding-right: 25px
+.u-PaddingRight40
+    padding-right: 40px
+.u-PaddingRight45
+    padding-right: 45px
+.u-PaddingRight50
+    padding-right: 50px
+.u-PaddingRight100
+    padding-right: 100px
+
+
+.u-Padding10x30
+    padding: 10px 30px
+
+
++laptop
+    .u-md
+        &-Padding0
+            padding: 0
+        &-Padding35
+            padding: 35px
+
+        &-PaddingTop0
+            padding-top: 0px
+        &-PaddingTop5
+            padding-top: 5px
+        &-PaddingTop10
+            padding-top: 10px
+        &-PaddingTop15
+            padding-top: 15px
+        &-PaddingTop20
+            padding-top: 20px
+        &-PaddingTop25
+            padding-top: 25px
+        &-PaddingTop30
+            padding-top: 30px
+
+        &-PaddingBottom0
+            padding-bottom: 0px
+        &-PaddingBottom10
+            padding-bottom: 10px
+        &-PaddingBottom20
+            padding-bottom: 20px
+        &-PaddingBottom30
+            padding-bottom: 30px
+
+        &-PaddingLeft10
+            padding-left: 10px
+        &-PaddingLeft20
+            padding-left: 20px
+        &-PaddingLeft30
+            padding-left: 30px
+
+        &-PaddingRight10
+            padding-right: 10px
+        &-PaddingRight20
+            padding-right: 20px
+        &-PaddingRight30
+            padding-right: 30px
+
++ipad
+    .u-sm
+        &-Padding0
+            padding: 0
+        &-Padding15
+            padding: 15px
+        &-Padding35
+            padding: 35px
+
+        &-PaddingTop0
+            padding-top: 0px
+        &-PaddingTop5
+            padding-top: 5px
+        &-PaddingTop10
+            padding-top: 10px
+        &-PaddingTop15
+            padding-top: 15px
+        &-PaddingTop20
+            padding-top: 20px
+        &-PaddingTop25
+            padding-top: 25px
+        &-PaddingTop30
+            padding-top: 30px
+        &-PaddingTop50
+            padding-top: 50px
+
+        &-PaddingBottom0
+            padding-bottom: 0px
+        &-PaddingBottom10
+            padding-bottom: 10px
+        &-PaddingBottom20
+            padding-bottom: 20px
+        &-PaddingBottom30
+            padding-bottom: 30px
+
+        &-PaddingLeft0
+            padding-left: 0px
+        &-PaddingLeft5
+            padding-left: 5px
+        &-PaddingLeft10
+            padding-left: 10px
+        &-PaddingLeft20
+            padding-left: 20px
+
+        &-PaddingRight0
+            padding-right: 0px
+        &-PaddingRight5
+            padding-right: 5px
+        &-PaddingRight10
+            padding-right: 10px
+        &-PaddingRight20
+            padding-right: 20px
+
++mobile
+    .u-xs
+        &-Padding0
+            padding: 0
+        &-Padding10
+            padding: 10px
+        &-Padding35
+            padding: 35px
+
+        &-PaddingTop0
+            padding-top: 0px
+        &-PaddingTop5
+            padding-top: 5px
+        &-PaddingTop10
+            padding-top: 10px
+        &-PaddingTop15
+            padding-top: 15px
+        &-PaddingTop20
+            padding-top: 20px
+        &-PaddingTop25
+            padding-top: 25px
+        &-PaddingTop30
+            padding-top: 30px
+        &-PaddingTop50
+            padding-top: 50px
+        &-PaddingTop70
+            padding-top: 70px
+        &-PaddingTop100
+            padding-top: 100px
+
+        &-PaddingBottom0
+            padding-bottom: 0px
+        &-PaddingBottom10
+            padding-bottom: 10px
+        &-PaddingBottom20
+            padding-bottom: 20px
+        &-PaddingBottom30
+            padding-bottom: 30px
+        &-PaddingBottom35
+            padding-bottom: 35px
+        &-PaddingBottom50
+            padding-bottom: 50px
+        &-PaddingBottom70
+            padding-bottom: 70px
+        &-PaddingBottom100
+            padding-bottom: 100px
+
+        &-PaddingLeft0
+            padding-left: 0
+        &-PaddingLeft15
+            padding-left: 15px
+        &-PaddingLeft20
+            padding-left: 20px
+        &-PaddingLeft50
+            padding-left: 50px
+
+        &-PaddingRight0
+            padding-right: 0
+        &-PaddingRight15
+            padding-right: 15px
+        &-PaddingRight20
+            padding-right: 20px
+        &-PaddingRight50
+            padding-right: 50px
+
+// border
+.u-BorderRadius0
+    border-radius: 0
+    overflow: hidden
+.u-BorderRadius4
+    border-radius: 4px
+    overflow: hidden
+.u-BorderRadius6
+    border-radius: 6px
+    overflow: hidden
+.u-Rounded
+    border-radius: 999px
+    overflow: hidden
+
+// shadow
+.u-BoxShadow40
+    box-shadow: 0 0 40px rgba($black, .1)
+.u-BoxShadow100
+    box-shadow: 0 0 100px rgba($black, .1)
+
+.u-TextGradiennt
+    background: linear-gradient(330deg, $primary 0%, $primary 30%, $secondary 65%,  $secondary 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+// opacity
+.u-Opacity10
+    opacity: .1
+.u-Opacity20
+    opacity: .2
+.u-Opacity40
+    opacity: .4
+
+
+//positon relative
+
+.position-relative
+    position: relative
+
+.position-bottom
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
+.position-top
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
+
+// z-index
+.u-zIndex10
+    z-index: 10
+
+
+// translateY
+
+.u-TranslateY-90
+    transform: translateY(-90px)
+
+// vertical align center
+
+.v-align-parent
+    position: relative
+    width: 100%
+
+    .v-align-child
+        position: absolute
+        top: 50%
+        left: 0
+        right: 0
+        transform: translateY(-50%)
+        z-index: 2
+
+//text light dark
+
+.light-txt
+    color: $white
+
+.dark-txt
+    color: $black
+
+
+.default-color
+    color: $primary
+
+.pointer
+    cursor: pointer

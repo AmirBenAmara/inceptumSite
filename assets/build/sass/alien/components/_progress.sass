@@ -1,0 +1,74 @@
+// Progress Bar
+
+.progress
+    position: relative
+    display: inline-block
+    height: 3px
+    width: 100%
+    // margin-bottom: 40px
+    background-color: $gray-lighter
+    border-radius: 0
+    overflow: visible
+    box-shadow: none
+    &-title
+        width: 40%
+        margin-bottom: 10px
+    > .progress-title
+        position: absolute
+        width: 100%
+        left: 0
+        top: 50%
+        color: #ffffff
+        transform: translate(0%, -50%)
+        font-weight: 400
+        margin-bottom: 0
+        padding-left: 15px
+        padding-right: 15px
+
+    &-bar
+        height: 100%
+        width: 0px
+        border-radius: 0
+        background-color: $gray-dark
+        box-shadow: none
+    &--innerText
+        height: 30px
+        border-radius: 3px
+        overflow: hidden
+
+    &--primary
+        .progress-bar
+            background-color: $primary
+
+    &--gradient
+        .progress-bar
+            background: linear-gradient(90deg, $primary, $secondary)
+            background-color: $primary
+
+.bg-dark,
+.bg-darker
+    .progress
+        background-color: rgba($white, .1)
+        &-bar
+            background-color: $white
+
+
+
+        &--innerText
+            .progress-title
+                color: $text
+
+        &.progress--primary
+            .progress
+                &-title
+                    color: $white
+                &-bar
+                    background-color: $primary
+
+        &.progress--gradient
+            .progress
+                &-title
+                    color: $white
+                &-bar
+                    background: linear-gradient(90deg, $primary, $secondary)
+                    background-color: $primary

@@ -1,0 +1,70 @@
+// Heading
+
+.Heading
+    position: relative
+    > *
+        position: inherit
+        z-index: 1
+    &::before
+        content: attr(data-title)
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        right: 0
+        font-size: 120px
+        opacity: .05
+        line-height: $heading-line-height
+        font-weight: 700
+        cursor: default
+        text-transform: uppercase
+        +mobile
+            font-size: 65px
+
+    &-wing
+        position: relative
+        text-align: center
+        display: inline-block
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            top: 50%
+            width: 64px
+            height: 2px
+            background-color: $text
+        &::before
+            left: 0
+            margin-left: -85px
+        &::after
+            right: 0
+            margin-right: -85px
+
+        &--darker
+            background-color: $gray-darker
+            color: $white
+            padding: 10px 25px
+
+    &--center
+        text-align: center
+        &::before
+            text-align: center
+    &--shadow
+        &::before
+            opacity: 1
+            color: $white
+            text-shadow: 0 0 50px rgba($black, .1)
+.Dot
+    display: inline-block
+    height: 14px
+    width: 14px
+    background-color: $primary
+
+//
+.bg-darker
+    .Heading
+        &--shadow
+            &::before
+                // opacity: 0
+                color: $gray-darker
+                text-shadow: 0 0 50px rgba($black, 1)

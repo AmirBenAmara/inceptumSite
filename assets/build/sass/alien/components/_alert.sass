@@ -1,0 +1,51 @@
+// Alert
+
+.alert
+    position: inherit
+    border-radius: 0
+    border: 0
+    padding: 20px 40px 20px 20px
+    background-color: rgba($black, .04)
+    border-left: 2px solid $black
+    &--justBorder
+        background-color: transparent
+        border: 2px solid rgba($black, .08)
+
+    &-warning
+        color: $warning
+        background-color: rgba($warning, .3)
+        border-left: 2px solid $warning
+        &--justBorder
+            background-color: transparent
+            border: 2px solid rgba($warning, .3)
+
+    &-success
+        color: $success
+        background-color: rgba($success, .3)
+        border-left: 2px solid $success
+        &--justBorder
+            background-color: transparent
+            border: 2px solid rgba($success, .3)
+
+    &-danger
+        color: $danger
+        background-color: rgba($danger, .3)
+        border-left: 2px solid $danger
+        &--justBorder
+            background-color: transparent
+            border: 2px solid rgba($danger, .3)
+
+    &-info
+        color: $info
+        background-color: rgba($info, .3)
+        border-left: 2px solid $info
+        &--justBorder
+            background-color: transparent
+            border: 2px solid rgba($info, .3)
+
+    &--bgNone
+        background-color: transparent
+        border: 0
+
+    .close
+        opacity: .5

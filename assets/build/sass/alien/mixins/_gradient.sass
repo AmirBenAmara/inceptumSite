@@ -1,0 +1,126 @@
+// gradient
+
+// with hover effect
+=gradient-hover-animation($bgImgColor, $gradientDeg, $gradientStart, $gradientStartEnd, $gradientTransTime)
+    background-size: 100%
+    background-image: $bgImgColor
+    background-color: $bgImgColor
+    position: relative
+    z-index: 10
+    transition: none $gradientTransTime $easing
+    transition-property: background-image, background-color
+    &:before
+        border-radius: inherit
+        background-image: linear-gradient($gradientDeg, $gradientStart, $gradientStartEnd)
+        background-color: $gradientStart
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        z-index: -10
+        // transition: opacity $gradientTransTime $easing
+        transition: none $gradientTransTime $easing
+        transition-property: opacity
+    &:hover
+        background-image: $bgImgColor
+        background-color: $bgImgColor
+        &:before
+            opacity: 1
+
+
+// btn gradient
+=btn-gradient-animation-toggle($text, $gradientDeg, $gradientStart, $gradientStartEnd, $gradientTransTime)
+    background-size: 100%
+    background-image: linear-gradient($gradientDeg, $gradientStart, $gradientStartEnd)
+    position: relative
+    z-index: 10
+    color: $text
+    overflow: hidden
+    &::before
+        border-radius: inherit
+        background-image: linear-gradient($gradientDeg, $gradientStartEnd, $gradientStart)
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        z-index: -10
+        transition: none $gradientTransTime $easing
+        transition-property: opacity
+
+    &:hover,
+    &:focus,
+    &.focus
+        color: $text
+        &::before
+            opacity: 1
+
+// btn hover animation
+=btn-gradient-hover-animation($bgImgColor, $gradientDeg, $gradientStart, $gradientStartEnd, $gradientTransTime)
+    background-size: 100%
+    // background-image: $bgImgColor
+    background-color: $bgImgColor
+    position: relative
+    z-index: 10
+    color: $gradientStart
+    border: none
+    transition: none $gradientTransTime $easing
+    transition-property: color, background-image
+    &:before
+        border-radius: inherit
+        background-image: linear-gradient($gradientDeg, $gradientStart, $gradientStartEnd)
+        background-color: $gradientStart
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        z-index: -10
+        // transition: opacity $gradientTransTime $easing
+        transition: none $gradientTransTime $easing
+        transition-property: opacity
+    &:hover
+        color: $bgImgColor
+        background-image: $gradientStart
+        &:before
+            opacity: 1
+
+// hover dark
+=btn-gradient-animation-hoverDark($text, $gradientDeg, $gradientStart, $gradientStartEnd, $gradientTransTime)
+    background-size: 100%
+    background-image: linear-gradient($gradientDeg, $gradientStart, $gradientStartEnd)
+    position: relative
+    z-index: 10
+    color: $text
+    overflow: hidden
+    &::before
+        border-radius: inherit
+        background-image: linear-gradient($gradientDeg, $gray, $gray)
+        content: ''
+        display: block
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        z-index: -10
+        transition: none $gradientTransTime $easing
+        transition-property: opacity
+
+    &:hover,
+    &:focus,
+    &.focus
+        color: $text
+        &::before
+            opacity: 1
